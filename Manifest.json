@@ -1,0 +1,38 @@
+{
+  "info" :
+  {
+    "name" : "Bernstein",
+    "category" : ["theme"],
+
+    "summary" : "Bernstein Theme Contribution",
+    "description" : "A dark theme for qx 3.0 and above.",
+
+    "homepage" : "http://contrib.qooxdoo.org/project/Bernstein",
+
+    "license" : "LGPL/EPL",
+    "authors" :
+    [
+      {
+        "name" : "Norbert Schröder (scro34)",
+        "email" : "schroeder@scro34.de"
+      }
+    ],
+
+    "version" : "trunk",
+    "qooxdoo-versions": ["3.0", "3.5", "4.0", "4.1"],
+
+    "download" : "",
+    "checksum" : ""
+  },
+
+  "provides" :
+  {
+    "namespace"   : "bernstein",
+    "encoding"    : "utf-8",
+    "class"       : "source/class",
+    "resource"    : "source/resource",
+    "translation" : "source/translation",
+    "type"        : "contribution"
+  }
+}
+
