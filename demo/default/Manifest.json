@@ -1,0 +1,34 @@
+{
+  "info" : 
+  {
+    "name" : "Bernstein Demo",
+
+    "summary" : "Bernstein Theme Demo",
+    "description" : "Demo application for the Bernstein theme contribution",
+    
+    "homepage" : "http://demo.qooxdoo.org/contrib/Bernstein",
+
+    "license" : "LGPL/EPL",
+    "authors" : 
+    [
+      {
+        "name" : "Norbert Schröder (scro34)",
+        "email" : "schroeder@scro34.de"
+      }
+    ],
+
+    "version" : "trunk",
+    "qooxdoo-versions": ["3.0", "3.5", "4.0", "4.1"],
+  },
+  
+  "provides" : 
+  {
+    "namespace"   : "bernstein.demo",
+    "encoding"    : "utf-8",
+    "class"       : "source/class",
+    "resource"    : "source/resource",
+    "translation" : "source/translation",
+    "type"        : "application"
+  }
+}
+
