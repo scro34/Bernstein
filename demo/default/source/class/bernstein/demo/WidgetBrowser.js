@@ -13,7 +13,7 @@
 ************************************************************************ */
 
 /**
- * @asset(qx/icon/Oxygen/16/apps/utilities-statistics.png)
+ * @asset(qx/icon/${qx.icontheme}/16/apps/utilities-statistics.png)
  */
  
 qx.Class.define("bernstein.demo.WidgetBrowser",
@@ -44,7 +44,7 @@ qx.Class.define("bernstein.demo.WidgetBrowser",
       this._tabView = new bernstein.demo.view.TabView();
       this._tabView.set({
         minWidth: 880,
-        minHeight: 660,
+        minHeight: 610,
         padding: 5
       });
       

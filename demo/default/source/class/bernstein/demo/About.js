@@ -6,7 +6,6 @@
    License:
      LGPL: http://www.gnu.org/licenses/lgpl.html
      EPL: http://www.eclipse.org/org/documents/epl-v10.php
-     See the LICENSE file in the project's top-level directory for details.
 
    Authors:
      * Norbert Schröder (scro34)
@@ -36,7 +35,8 @@ qx.Class.define("bernstein.demo.About",
         caption: "About",
         contentPadding: 5,
         showMaximize: false,
-        showMinimize: false
+        showMinimize: false,
+        resizable: false
       });
 
       var url = qx.util.ResourceManager.getInstance().toUri(this._aboutTextUrl);

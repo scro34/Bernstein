@@ -6,7 +6,6 @@
    License:
      LGPL: http://www.gnu.org/licenses/lgpl.html
      EPL: http://www.eclipse.org/org/documents/epl-v10.php
-     See the LICENSE file in the project's top-level directory for details.
 
    Authors:
      * Norbert Schröder (scro34)
@@ -21,7 +20,6 @@
  * @asset(qx/icon/${qx.icontheme}/16/actions/dialog-ok.png)
  * @asset(qx/icon/${qx.icontheme}/16/actions/dialog-cancel.png)
  * @asset(qx/icon/${qx.icontheme}/16/actions/view-refresh.png)
- * @asset(qx/icon/${qx.icontheme}/16/actions/window-close.png)
  * @asset(qx/icon/${qx.icontheme}/16/apps/office-calendar.png)
  * @asset(qx/icon/${qx.icontheme}/16/mimetypes/office-document.png)
  * @asset(qx/icon/${qx.icontheme}/16/places/folder.png)

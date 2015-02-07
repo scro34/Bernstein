@@ -1,2 +1,2 @@
 # Bernstein
-Additional dark theme for qooxdoo 3.0 and above
+«Bernstein» (engl. amber) is a dark theme for desktop applications written in qooxdoo v3.0 or above.

@@ -6,20 +6,24 @@
    License:
      LGPL: http://www.gnu.org/licenses/lgpl.html
      EPL: http://www.eclipse.org/org/documents/epl-v10.php
-     See the LICENSE file in the project's top-level directory for details.
 
    Authors:
      * Norbert Schröder (scro34)
 
+   Note:
+     The Audio Player loads its playlist from a file containing data in
+     JSON format. See the accompanying "playlist.json" for information
+     about the data structure.
+   
 ************************************************************************ */
 
 /**
- * @asset(qx/icon/Oxygen/16/actions/go-home.png)
- * @asset(qx/icon/Oxygen/16/apps/media-audio-player.png)
- * @asset(qx/icon/Oxygen/16/actions/media-skip-backward.png)
- * @asset(qx/icon/Oxygen/16/actions/media-skip-forward.png)
- * @asset(qx/icon/Oxygen/22/actions/media-playback-pause.png)
- * @asset(qx/icon/Oxygen/22/actions/media-playback-start.png)
+ * @asset(qx/icon/${qx.icontheme}/16/actions/go-home.png)
+ * @asset(qx/icon/${qx.icontheme}/16/apps/media-audio-player.png)
+ * @asset(qx/icon/${qx.icontheme}/16/actions/media-skip-backward.png)
+ * @asset(qx/icon/${qx.icontheme}/16/actions/media-skip-forward.png)
+ * @asset(qx/icon/${qx.icontheme}/22/actions/media-playback-pause.png)
+ * @asset(qx/icon/${qx.icontheme}/22/actions/media-playback-start.png)
  */
  
 qx.Class.define("bernstein.demo.PlayerWindow",
@@ -80,7 +84,7 @@ qx.Class.define("bernstein.demo.PlayerWindow",
     
     _createMainBox: function()
     {
-      var container = new qx.ui.container.Composite(new qx.ui.layout.HBox(0));
+      var container = new qx.ui.container.Composite(new qx.ui.layout.HBox(3));
       container.add(this._createBoxLeft());
       container.add(this._createVolumeControl());
       container.add(this._createBoxRight());
@@ -91,9 +95,7 @@ qx.Class.define("bernstein.demo.PlayerWindow",
     
     _createBoxLeft: function()
     {
-      var container = new qx.ui.container.Composite(new qx.ui.layout.VBox(0)).set({
-        marginRight: 5
-      });
+      var container = new qx.ui.container.Composite(new qx.ui.layout.VBox(0));
       container.add(this._createAlbumBox());
       container.add(this._createPositionBar());
       container.add(this._createPlayBar());
