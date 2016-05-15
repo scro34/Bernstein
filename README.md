@@ -37,7 +37,6 @@ set with an appropriate license would be very much appreciated.
 **replaced** by «Bernstein». The downside to this approach: If you want to modify and/or extend the "amber" appearance 
 of your application you have to do this directly in the «Bernstein» theme files which may later lead to subtle bugs or
 strange side effects.
-
 You might, therefore, want to invest a few more minutes, leave the `QXTHEME` key in `config.json` untouched and let
 your predefined application theme **inherit** from «Bernstein» instead of being replaced by it. To do this, go to the 
 theme folder of your application and modify Appearance.js, Color.js, Decoration.js and Font.js as shown in this 
