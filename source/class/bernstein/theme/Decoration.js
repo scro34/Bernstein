@@ -128,9 +128,7 @@ qx.Theme.define("bernstein.theme.Decoration",
     {
       include: "button",
       
-      style: {
-        color: "text-hovered"
-      }
+      style: {}
     },
     
     "button-checked":
@@ -248,16 +246,21 @@ qx.Theme.define("bernstein.theme.Decoration",
       }
     },
     
+    "button-circle-disabled":
+    {
+      include: "button-disabled",
+      
+      style: {
+        radius: 90
+      }
+    },
+    
     "button-circle-hovered":
     {
       include: "button-hovered",
       
       style: {
-        radius: 90,
-        color: "text-hovered",
-        shadowLength: 0,
-        shadowColor: "text-hovered",
-        shadowBlurRadius: 5
+        radius: 90
       }
     },
     
@@ -266,11 +269,7 @@ qx.Theme.define("bernstein.theme.Decoration",
       include: "button-checked",
       
       style: {
-        radius: 90,
-        color: "text-hovered",
-        shadowLength: 0,
-        shadowColor: "text-hovered",
-        shadowBlurRadius: 5
+        radius: 90
       }
     },
     
@@ -293,6 +292,16 @@ qx.Theme.define("bernstein.theme.Decoration",
       }
     },
     
+    "button-circle-checked-disabled":
+    {
+      include: "button-checked-disabled",
+      
+      style: {
+        radius: 90,
+        backgroundColor: "button-end"
+      }
+    },
+    
     "button-circle-checked-hovered":
     {
       include: "button-circle-pressed"
@@ -300,11 +309,7 @@ qx.Theme.define("bernstein.theme.Decoration",
 
     "button-circle-checked-focused": 
     {
-      include: "button-circle-checked",
-      
-      style: {
-        color: "text-hovered"
-      }
+      include: "button-circle-checked"
     },
     
     /*
@@ -1173,7 +1178,7 @@ qx.Theme.define("bernstein.theme.Decoration",
         startColor: "input-start",
         endColor: "input-end",
         startColorPosition: 0,
-        endColorPosition: 1,
+        endColorPosition: 2,
         colorPositionUnit: "px",
         shadowLength: 0,
         shadowBlurRadius: 3,

@@ -116,7 +116,11 @@ qx.Theme.define("bernstein.theme.Appearance",
         }
         else if (states.disabled)
         {
-          decorator = states.checked ? "button-checked-disabled" : "button-disabled";
+          if (states.circle) {
+            decorator = states.checked ? "button-circle-checked-disabled" : "button-circle-disabled";
+          } else {
+            decorator = states.checked ? "button-checked-disabled" : "button-disabled";
+          }
           textColor = undefined;
         }
         else if (states.pressed)
