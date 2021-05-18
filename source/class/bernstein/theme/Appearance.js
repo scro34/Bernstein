@@ -15,7 +15,7 @@
 /**
  * The Bernstein appearance theme.
  *
- * @asset(bernstein/decoration*)
+ * @asset(bernstein/*)
  * 
  * @asset(qx/icon/${qx.icontheme}/16/actions/dialog-ok.png)
  * @asset(qx/icon/${qx.icontheme}/16/actions/dialog-cancel.png)
@@ -204,6 +204,11 @@ qx.Theme.define("bernstein.theme.Appearance",
           center: true
         };
       }
+    },
+
+    "toggle-button":
+    {
+      include: "button"
     },
 
     "hover-button":
@@ -1046,7 +1051,7 @@ qx.Theme.define("bernstein.theme.Appearance",
         return {
           padding: states.dragover ? [4, 4, 2, 6] : [4, 4, 4, 6],
           textColor: states.selected ? "text-highlight" : undefined,
-          decorator: states.selected ? "selected" : undefined,
+          decorator: states.selected ? "selected" : states.dragover ? "dragover" : undefined,
           cursor: states.disabled ? "default" : "pointer"
         };
       }
@@ -2240,7 +2245,7 @@ qx.Theme.define("bernstein.theme.Appearance",
 
         return {
           decorator: decorator,
-          padding: [ 1, 4, 4 ],
+          padding: [ 1, 4, 3 ],
           margin: 2,
           textColor: textColor
         };
