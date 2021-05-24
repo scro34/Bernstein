@@ -1,32 +1,25 @@
 {
- "$schema": "https://qooxdoo.org/schema/Manifest-1-0-0.json",
-  "info" :
-  {
-    "name" : "bernstein.demo",
-
-    "summary" : "Bernstein Theme Contribution",
-    "description" : "A dark theme for qx 6.0",
-
-    "homepage" : "https://github.com/scro34/Bernstein",
-
-    "license" : "MIT license",
-    "authors" : [
-  {
-    "name": "Norbert Schröder",
-    "email": "(scro34)"
-  }
-],
-
-    "version" : "1.0.0"
+  "$schema": "https://qooxdoo.org/schema/Manifest-1-0-0.json",
+  "info": {
+    "name": "bernstein.demo",
+    "summary": "Bernstein Theme Contribution",
+    "description": "A dark theme for qx 6.0",
+    "homepage": "https://github.com/scro34/Bernstein",
+    "license": "MIT license",
+    "authors": [
+      {
+        "name": "Norbert Schröder",
+        "email": "(scro34)"
+      }
+    ],
+    "version": "2.0.0"
   },
-
-  "provides" :
-  {
-    "namespace"   : "bernstein",
-    "encoding"    : "utf-8",
-    "class"       : "source/class",
-    "resource"    : "source/resource",
-    "translation" : "source/translation",
+  "provides": {
+    "namespace": "bernstein",
+    "encoding": "utf-8",
+    "class": "source/class",
+    "resource": "source/resource",
+    "translation": "source/translation",
     "webfonts": [
       {
         "name": "FontAwesome",
@@ -38,10 +31,9 @@
       }
     ]
   },
-
   "requires": {
     "@qooxdoo/framework": "^6.0.0",
-    "@qooxdoo/compiler" : "^1.0.0",
+    "@qooxdoo/compiler": "^1.0.0",
     "qooxdoo/qxl.formdemo": "^1.0.2"
   }
 }
