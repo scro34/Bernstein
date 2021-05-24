@@ -1,11 +1,11 @@
 /* ************************************************************************
 
    Copyright:
-     2015 Norbert Schröder
+     2015-2021 Norbert Schröder
 
    License:
-     LGPL: http://www.gnu.org/licenses/lgpl.html
-     EPL: http://www.eclipse.org/org/documents/epl-v10.php
+     MIT: https://opensource.org/licenses/MIT
+     See the LICENSE file in the project's top-level directory for details.
 
    Authors:
      * Norbert Schröder (scro34)
@@ -17,21 +17,9 @@
  *
  * @asset(bernstein/*)
  * 
- * @asset(qx/icon/${qx.icontheme}/16/actions/dialog-ok.png)
- * @asset(qx/icon/${qx.icontheme}/16/actions/dialog-cancel.png)
- * @asset(qx/icon/${qx.icontheme}/16/actions/view-refresh.png)
- * @asset(qx/icon/${qx.icontheme}/16/apps/office-calendar.png)
  * @asset(qx/icon/${qx.icontheme}/16/mimetypes/office-document.png)
  * @asset(qx/icon/${qx.icontheme}/16/places/folder.png)
  * @asset(qx/icon/${qx.icontheme}/16/places/folder-open.png)
- *
- * @asset(qx/icon/${qx.icontheme}/22/mimetypes/office-document.png)
- * @asset(qx/icon/${qx.icontheme}/22/places/folder.png)
- * @asset(qx/icon/${qx.icontheme}/22/places/folder-open.png)
- *
- * @asset(qx/icon/${qx.icontheme}/32/mimetypes/office-document.png)
- * @asset(qx/icon/${qx.icontheme}/32/places/folder.png)
- * @asset(qx/icon/${qx.icontheme}/32/places/folder-open.png)
  * 
  * @asset(qx/static/*)
  */
@@ -103,7 +91,7 @@ qx.Theme.define("bernstein.theme.Appearance",
       style: function(states)
       {
         var decorator, textColor;
-        var padding = states.checked || states.pressed ? [3, 9] : [2, 9, 4]; 
+        var padding = states.checked || states.pressed ? [3, 9, 1] : [2, 9]; 
 
         if (states.checked && states.focused && !states.inner)
         {
@@ -396,7 +384,7 @@ qx.Theme.define("bernstein.theme.Appearance",
       style: function(states)
       {
         return {
-          icon: "icon/16/actions/dialog-ok.png"
+          icon: "@fontawesome/f00c/14"
         };
       }
     },
@@ -409,7 +397,7 @@ qx.Theme.define("bernstein.theme.Appearance",
       style: function(states)
       {
         return {
-          icon: "icon/16/actions/dialog-cancel.png"
+          icon: "@fontawesome/f00d/14"
         };
       }
     },
@@ -816,6 +804,7 @@ qx.Theme.define("bernstein.theme.Appearance",
         return {
           textAlign: "center",
           padding: [ 2, 4 ],
+          minWidth: 30,
           backgroundColor: "background-week"
         };
       }
@@ -828,11 +817,12 @@ qx.Theme.define("bernstein.theme.Appearance",
         var decorator = states.disabled ? undefined : states.selected ? "selected" : undefined;
 
         return {
-          textAlign: "center",
+          textAlign: "right",
           decorator: decorator,
           textColor: states.disabled ? "text-disabled" : states.selected ? "text-highlight" : states.otherMonth ? "text-light" : undefined,
           font: states.today ? "bold" : undefined,
-          padding: [ 2, 4 ]
+          padding: [ 2, 4 ],
+          minWidth: 30
         };
       }
     },
@@ -853,7 +843,7 @@ qx.Theme.define("bernstein.theme.Appearance",
       style: function(states)
       {
         return {
-          icon: "icon/16/apps/office-calendar.png",
+          icon: "@fontawesome/f073/16",
           padding: [1, 3],
           margin: 0
         };
@@ -1882,7 +1872,7 @@ qx.Theme.define("bernstein.theme.Appearance",
       style: function()
       {
         return {
-          icon: "icon/16/actions/view-refresh.png"
+          icon: "@fontawesome/f2f9/14"
         };
       }
     },
@@ -2506,7 +2496,7 @@ qx.Theme.define("bernstein.theme.Appearance",
         var decorator = states.selected ? "selected" : undefined;
 
         return {
-          padding: [ 2, 6 ],
+          padding: [ 4, 6 ],
           textColor: states.selected ? "text-highlight" : undefined,
           decorator: decorator
         };
@@ -2567,14 +2557,14 @@ qx.Theme.define("bernstein.theme.Appearance",
       {
         var icon, iconOpened;
         if (states.small) {
-          icon = states.opened ? "icon/16/places/folder-open.png" : "icon/16/places/folder.png";
-          iconOpened = "icon/16/places/folder-open.png";
+          icon = states.opened ? "@fontawesome/f07c/10" : "@fontawesome/f07b/10";
+          iconOpened = "@fontawesome/f07c/10";
         } else if (states.large) {
-          icon = states.opened ? "icon/32/places/folder-open.png" : "icon/32/places/folder.png";
-          iconOpened = "icon/32/places/folder-open.png";
+          icon = states.opened ? "@fontawesome/f07c/26" : "@fontawesome/f07b/26";
+          iconOpened = "@fontawesome/f07c/26";
         } else {
-          icon = states.opened ? "icon/22/places/folder-open.png" : "icon/22/places/folder.png";
-          iconOpened = "icon/22/places/folder-open.png";
+          icon = states.opened ? "@fontawesome/f07c/16" : "@fontawesome/f07b/16";
+          iconOpened = "@fontawesome/f07c/16";
         }
 
         return {
@@ -2593,9 +2583,9 @@ qx.Theme.define("bernstein.theme.Appearance",
       {
         return {
           icon:
-            states.small ? "icon/16/mimetypes/office-document.png" :
-            states.large ? "icon/32/mimetypes/office-document.png" :
-            "icon/22/mimetypes/office-document.png"
+            states.small ? "@fontawesome/f15b/10" :
+            states.large ? "@fontawesome/f15b/26" :
+            "@fontawesome/f15b/16"
         };
       }
     },

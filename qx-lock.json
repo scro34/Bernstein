@@ -1,0 +1,13 @@
+{
+  "libraries": [
+    {
+      "library_name": "formdemo",
+      "library_version": "1.0.2",
+      "path": "qx_packages/qooxdoo_qxl_formdemo_v1_0_2",
+      "uri": "qooxdoo/qxl.formdemo",
+      "repo_name": "qooxdoo/qxl.formdemo",
+      "repo_tag": "v1.0.2"
+    }
+  ],
+  "version": "2.1.0"
+}

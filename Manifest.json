@@ -1,28 +1,23 @@
 {
+ "$schema": "https://qooxdoo.org/schema/Manifest-1-0-0.json",
   "info" :
   {
-    "name" : "Bernstein",
-    "category" : ["theme"],
+    "name" : "bernstein.demo",
 
     "summary" : "Bernstein Theme Contribution",
-    "description" : "A dark theme for qx 3.0 and above (up to v5.0.2).",
+    "description" : "A dark theme for qx 6.0",
 
     "homepage" : "https://github.com/scro34/Bernstein",
 
-    "license" : "MIT",
-    "authors" :
-    [
-      {
-        "name" : "Norbert Schröder (scro34)",
-        "email" : "schroeder@scro34.de"
-      }
-    ],
+    "license" : "MIT license",
+    "authors" : [
+  {
+    "name": "Norbert Schröder",
+    "email": "(scro34)"
+  }
+],
 
-    "version" : "1.0.0",
-    "qooxdoo-versions": ["3.0", "3.5", "4.0", "4.1", "5.0.2"],
-
-    "download" : "",
-    "checksum" : ""
+    "version" : "1.0.0"
   },
 
   "provides" :
@@ -32,7 +27,21 @@
     "class"       : "source/class",
     "resource"    : "source/resource",
     "translation" : "source/translation",
-    "type"        : "contribution"
+    "webfonts": [
+      {
+        "name": "FontAwesome",
+        "defaultSize": 16,
+        "mapping": "resource/bernstein/fonts/fontawesome.map",
+        "resources": [
+          "resource/bernstein/fonts/fa-solid-900.ttf"
+        ]
+      }
+    ]
+  },
+
+  "requires": {
+    "@qooxdoo/framework": "^6.0.0",
+    "@qooxdoo/compiler" : "^1.0.0",
+    "qooxdoo/qxl.formdemo": "^1.0.2"
   }
 }
-

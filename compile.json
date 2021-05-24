@@ -1,0 +1,82 @@
+{
+  "$schema": "https://qooxdoo.org/schema/compile-1-0-0.json",
+  "targets": [
+    {
+      "type": "source",
+      "outputPath": "compiled/source",
+      "bundle": {
+        "include": ["qx.*"]
+      }
+    },
+    {
+      "type": "build",
+      "outputPath": "compiled/build"
+    }
+  ],
+  "defaultTarget": "source",
+  "locales": ["en"],
+  "environment": {
+    "qx.icontheme": "Oxygen"
+  },
+
+  "applications": [
+    {
+      "class": "bernstein.demo.Application",
+      "theme": "bernstein.demo.theme.Theme",
+      "name": "bernstein.demo",
+      "title": "Bernstein Demo",
+      "parts" :
+         {
+           "boot" :
+           {
+             "include" : [ "bernstein.demo.Application", "bernstein.theme.Theme", "qxl.formdemo" ]
+           },
+           
+           "form" :
+           {
+             "include" : [ "bernstein.demo.pages.Form" ]
+           },
+           
+           "tree" :
+           {
+             "include" : [ "bernstein.demo.pages.Tree" ]
+           },
+           
+           "list" :
+           {
+             "include" : [ "bernstein.demo.pages.List" ]
+           },
+           
+           "toolbar" :
+           {
+             "include" : [ "bernstein.demo.pages.ToolBar" ]
+           },
+           
+           "window" :
+           {
+             "include" : [ "bernstein.demo.pages.Window" ]
+           },
+           
+           "tab" :
+           {
+             "include" : [ "bernstein.demo.pages.Tab" ]
+           },
+           
+           "embed" :
+           {
+             "include" : [ "bernstein.demo.pages.Embed" ]
+           },
+           
+           "embedframe" :
+           {
+             "include" : [ "bernstein.demo.pages.EmbedFrame" ]
+           },
+           
+           "misc" :
+           {
+             "include" : [ "bernstein.demo.pages.Misc" ]
+           }
+         }
+    }
+  ]
+}

@@ -1,4 +1,5 @@
-/nbproject/private/
-/demo/default/source/script/
-/nbproject/project.properties
-/nbproject/project.xml
+# .gitignore template for skeleton-based apps
+/compiled
+/qx_packages
+/node_modules
+.package-cache.json
